@@ -5,9 +5,9 @@ The result will determine if the surf and ice cream shop business is sustainable
 
 # Results
 
--The mean temperature for June is 75 and for December is 71.
--The minimum temperature for June is 64 and for December is 56.
--The maximum temperature for June is 85 and for December is 83.
+* The mean temperature for June is 75 and for December is 71.
+* The minimum temperature for June is 64 and for December is 56.
+* The maximum temperature for June is 85 and for December is 83.
 
 # Summary
 
@@ -16,7 +16,10 @@ The result will determine if the surf and ice cream shop business is sustainable
 The below query supports decision by providing latest year average temperature 
 and precipitation. 
 
-session.query(Measurement.tobs).filter(extract('year', Measurement.date)==2017).all()
-session.query(Measurement.prcp).filter(extract('month',Measurement.date)==6).all()
-session.query(Measurement.prcp).filter(extract('month',Measurement.date)==12).all()
+Temp=session.query(Measurement.tobs).filter(extract('year', Measurement.date)==2017).all()
+prcp=session.query(Measurement.prcp).filter(extract('month',Measurement.date)==6).all()
+prcp2=session.query(Measurement.prcp).filter(extract('month',Measurement.date)==12).all()
+list(Temp)------------convert to list
+df = pd.DataFrame(Temp)-------convert to data frame
+Summary_Dec = df.describe()-------
 
