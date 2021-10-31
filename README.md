@@ -1,4 +1,4 @@
-# Project over view
+# Project overview
 
 This analysis calculates and summarize temperature data for the months of June and December in Oahu.
 The result will determine if the surf and ice cream shop business is sustainable year round.
